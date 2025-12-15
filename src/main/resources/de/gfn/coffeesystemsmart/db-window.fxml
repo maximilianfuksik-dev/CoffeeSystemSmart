@@ -18,7 +18,7 @@
             <TableColumn prefWidth="75.0" text="Column X" />
         </columns>
       </TableView>
-      <Button layoutX="176.0" layoutY="446.0" mnemonicParsing="false" text="Diagramm anzeigen" />
-      <Button layoutX="315.0" layoutY="446.0" mnemonicParsing="false" text="Schließen" />
+      <Button layoutX="176.0" layoutY="446.0" mnemonicParsing="false" text="%btn.getData" />
+      <Button layoutX="315.0" layoutY="446.0" mnemonicParsing="false" text="%btn.cancel" />
    </children>
 </AnchorPane>

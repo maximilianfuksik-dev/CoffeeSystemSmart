@@ -14,7 +14,7 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button layoutX="175.0" layoutY="348.0" mnemonicParsing="false" text="Änderung speichern" />
+      <Button layoutX="175.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeSave" />
       <Button layoutX="325.0" layoutY="348.0" mnemonicParsing="false" text="Änderung verwerfen" />
    </children>
 </AnchorPane>
