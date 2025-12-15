@@ -15,6 +15,6 @@
         </columns>
       </TableView>
       <Button layoutX="175.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeSave" />
-      <Button layoutX="325.0" layoutY="348.0" mnemonicParsing="false" text="Änderung verwerfen" />
+      <Button layoutX="325.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeDiscard" />
    </children>
 </AnchorPane>
