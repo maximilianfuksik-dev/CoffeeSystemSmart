@@ -5,4 +5,6 @@ module de.gfn.coffeesystemsmart {
 
     opens de.gfn.coffeesystemsmart to javafx.fxml;
     exports de.gfn.coffeesystemsmart;
+    exports de.gfn.coffeesystemsmart.Controller;
+    opens de.gfn.coffeesystemsmart.Controller to javafx.fxml;
 }

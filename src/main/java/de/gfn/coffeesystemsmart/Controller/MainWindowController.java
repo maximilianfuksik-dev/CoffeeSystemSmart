@@ -1,9 +1,9 @@
-package de.gfn.coffeesystemsmart;
+package de.gfn.coffeesystemsmart.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class MainController {
+public class MainWindowController {
     @FXML
     private Label welcomeText;
 
