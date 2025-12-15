@@ -1,6 +1,7 @@
 module de.gfn.coffeesystemsmart {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens de.gfn.coffeesystemsmart to javafx.fxml;
