@@ -28,12 +28,12 @@
       <Button layoutX="18.0" layoutY="421.0" mnemonicParsing="false" text="%btn.turnOff" />
       <ImageView fitHeight="38.0" fitWidth="200.0" layoutX="83.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Bilder/Loading.png" />
+            <Image url="@images/Loading.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="38.0" fitWidth="200.0" layoutX="83.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Bilder/Loading.png" />
+            <Image url="@images/Loading.png" />
          </image>
       </ImageView>
       <Button layoutX="152.0" layoutY="421.0" mnemonicParsing="false" text="\%btn.back" />

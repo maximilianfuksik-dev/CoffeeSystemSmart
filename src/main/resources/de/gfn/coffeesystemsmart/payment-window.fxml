@@ -34,7 +34,7 @@
       <Label fx:id="orderPrice" layoutX="154.0" layoutY="95.0" prefHeight="70.0" prefWidth="330.0" text="Wahl + Kosten" />
       <ImageView fitHeight="83.0" fitWidth="122.0" layoutX="378.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Bilder/Smokaccino.jpg" />
+            <Image url="@images/Smokaccino.jpg" />
          </image>
       </ImageView>
       <CheckBox fx:id="isEmployee" layoutX="283.0" layoutY="422.0" mnemonicParsing="false" text="%check.employee" />

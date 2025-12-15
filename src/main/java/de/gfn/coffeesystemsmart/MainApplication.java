@@ -14,7 +14,7 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load()); // Fenster-Größe rausgenommen, damit es richtig angezeigt wird
-        stage.setTitle("Hello!");
+        stage.setTitle("Smart Coffee");
         stage.setScene(scene);
         stage.show();
         Logger log = new Logger("MainApplication");
