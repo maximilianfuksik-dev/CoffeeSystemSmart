@@ -3,7 +3,7 @@ package de.gfn.coffeesystemsmart.Repository;
 public class StatRepository {
 
     // Method for counting the all orders
-
+    // UpdateMethod
     // Method for evaluating data by type
 
     // WHERE Clause make it dynamic
@@ -18,7 +18,5 @@ public class StatRepository {
     // Method for Connection to Database
 
 
-
     // Method for implementing the data onto the charts
-    //
 }
