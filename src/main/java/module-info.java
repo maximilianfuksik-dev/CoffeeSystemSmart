@@ -9,4 +9,6 @@ module de.gfn.coffeesystemsmart {
     exports de.gfn.coffeesystemsmart;
     exports de.gfn.coffeesystemsmart.Controller;
     opens de.gfn.coffeesystemsmart.Controller to javafx.fxml;
+    exports de.gfn.coffeesystemsmart.Repository;
+    opens de.gfn.coffeesystemsmart.Repository to javafx.fxml;
 }
