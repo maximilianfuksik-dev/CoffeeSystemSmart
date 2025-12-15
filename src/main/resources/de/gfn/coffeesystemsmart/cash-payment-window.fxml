@@ -10,10 +10,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.CashPaymentWindowController">
    <children>
-      <Label alignment="CENTER" layoutX="215.0" layoutY="14.0" prefHeight="63.0" prefWidth="169.0" text="Barzahlung (Münzen)" />
+      <Label alignment="CENTER" layoutX="215.0" layoutY="14.0" prefHeight="63.0" prefWidth="169.0" text="%label.cashpay" />
       <Label alignment="CENTER" layoutX="238.0" layoutY="77.0" prefHeight="54.0" prefWidth="123.0" text="Kosten" />
-      <Button layoutX="198.0" layoutY="327.0" mnemonicParsing="false" text="Bestätigen" />
-      <Button layoutX="342.0" layoutY="327.0" mnemonicParsing="false" text="Abbrechen" />
+      <Button layoutX="198.0" layoutY="327.0" mnemonicParsing="false" text="%btn.accept" />
+      <Button layoutX="342.0" layoutY="327.0" mnemonicParsing="false" text="%btn.cancel" />
       <GridPane layoutX="200.0" layoutY="139.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,14 +25,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="2€" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0" text="1€" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="158.0" text="0,50€" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" text="0,20€" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="110.0" prefWidth="198.0" text="0,10€" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="139.0" text="0,05€" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button onActionPress="btn.twoEur" mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="2€" />
+            <Button onActionPress="btn.oneEur" mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0" text="1€" GridPane.columnIndex="1" />
+            <Button onActionPress="btn.fiftyCent" mnemonicParsing="false" prefHeight="99.0" prefWidth="158.0" text="0,50€" GridPane.rowIndex="1" />
+            <Button onActionPress="btn.twentyCent" mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" text="0,20€" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button onActionPress="btn.tenCent" mnemonicParsing="false" prefHeight="110.0" prefWidth="198.0" text="0,10€" GridPane.rowIndex="2" />
+            <Button onActionPress="btn.fiveCent" mnemonicParsing="false" prefHeight="73.0" prefWidth="139.0" text="0,05€" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Label alignment="CENTER" layoutX="238.0" layoutY="244.0" prefHeight="54.0" prefWidth="123.0" text="Input" />
+      <Label fx:id="pricing" alignment="CENTER" layoutX="238.0" layoutY="244.0" prefHeight="54.0" prefWidth="123.0" text="Input" />
    </children>
 </AnchorPane>
