@@ -20,4 +20,8 @@ public class MainApplication extends Application {
         Logger log = new Logger("MainApplication");
         log.log("start", "Programm Starts", "21");
     }
+
+    public static void main(String[] args) {
+        launch();
+    }
 }
