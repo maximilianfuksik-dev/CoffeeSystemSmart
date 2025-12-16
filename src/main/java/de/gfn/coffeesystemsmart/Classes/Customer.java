@@ -1,11 +1,11 @@
 package de.gfn.coffeesystemsmart.Classes;
 
 public interface Customer {
-
+    int getEmpID();
     String getFirstName();
     String getLastName();
-    int getEmpID();
-
+    String getDepartment();
+    int getCredits();
 
 
 }

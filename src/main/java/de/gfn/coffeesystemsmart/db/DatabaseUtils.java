@@ -1,4 +1,4 @@
-package de.gfn.coffeesystemsmart.Repository;
+package de.gfn.coffeesystemsmart.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

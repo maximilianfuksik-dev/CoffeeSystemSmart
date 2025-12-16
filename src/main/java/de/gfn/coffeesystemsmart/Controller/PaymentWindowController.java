@@ -1,6 +1,6 @@
 package de.gfn.coffeesystemsmart.Controller;
 
-import de.gfn.coffeesystemsmart.Classes.LanguageChange;
+import de.gfn.coffeesystemsmart.config.LanguageChange;
 import de.gfn.coffeesystemsmart.MainApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,6 @@ import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.scene.control.Label;
-import java.util.ResourceBundle;
 
 public class PaymentWindowController {
 

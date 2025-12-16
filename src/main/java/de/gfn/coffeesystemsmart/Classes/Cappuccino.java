@@ -16,9 +16,4 @@ public class Cappuccino implements Coffee{
     public int getMLiter() {
         return 0;
     }
-
-    @Override
-    public void brew() {
-
-    }
 }

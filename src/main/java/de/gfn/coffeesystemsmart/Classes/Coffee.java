@@ -8,5 +8,4 @@ public interface Coffee {
 
     int getMLiter();
 
-    void brew(); //e.x.
 }

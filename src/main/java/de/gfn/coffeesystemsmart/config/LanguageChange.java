@@ -1,4 +1,4 @@
-package de.gfn.coffeesystemsmart.Classes;
+package de.gfn.coffeesystemsmart.config;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

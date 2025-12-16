@@ -17,8 +17,4 @@ public class BigCoffee implements Coffee{
         return 0;
     }
 
-    @Override
-    public void brew() {
-
-    }
 }

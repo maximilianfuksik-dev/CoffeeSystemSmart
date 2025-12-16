@@ -1,6 +1,6 @@
 package de.gfn.coffeesystemsmart.Controller;
 
-import de.gfn.coffeesystemsmart.Classes.LanguageChange;
+import de.gfn.coffeesystemsmart.config.LanguageChange;
 import de.gfn.coffeesystemsmart.MainApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,7 +14,6 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ResourceBundle;
 
 import static javafx.application.Platform.exit;
 

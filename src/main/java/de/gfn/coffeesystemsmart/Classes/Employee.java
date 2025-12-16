@@ -13,9 +13,21 @@ public class Employee implements Customer{
     }
 
     @Override
+    public String getDepartment() {
+        return "";
+    }
+
+    @Override
+    public int getCredits() {
+        return 0;
+    }
+
+    @Override
     public int getEmpID() {
         return 0;
     }
+
+
 
 
 }

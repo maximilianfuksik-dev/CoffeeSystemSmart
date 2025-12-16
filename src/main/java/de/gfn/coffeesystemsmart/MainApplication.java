@@ -1,5 +1,6 @@
 package de.gfn.coffeesystemsmart;
 
+import de.gfn.coffeesystemsmart.Classes.Cappuccino;
 import de.gfn.coffeesystemsmart.Controller.MainWindowController;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;

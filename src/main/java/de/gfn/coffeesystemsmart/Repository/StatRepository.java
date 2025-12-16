@@ -1,14 +1,14 @@
 package de.gfn.coffeesystemsmart.Repository;
 
 public class StatRepository {
-
-    // Kein SQL im Controller
+// Controller --> Service --> Repository --> DB
+// Kein SQL im Controller
 // Kein JavaFX im Repository
 // Keine DB-Connection im FXML
-//
 // Repository = Daten
 // Service = Logik
 // Controller = Anzeige
+    // Hier müssen Datensätzen nur glesen werden bzw. Ausgewertet
 
 
     // Method for counting the all orders

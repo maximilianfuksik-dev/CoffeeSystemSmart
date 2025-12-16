@@ -13,4 +13,10 @@ module de.gfn.coffeesystemsmart {
     opens de.gfn.coffeesystemsmart.Repository to javafx.fxml;
     exports de.gfn.coffeesystemsmart.Classes;
     opens de.gfn.coffeesystemsmart.Classes to javafx.fxml;
+    exports de.gfn.coffeesystemsmart.config;
+    opens de.gfn.coffeesystemsmart.config to javafx.fxml;
+    exports de.gfn.coffeesystemsmart.utils;
+    opens de.gfn.coffeesystemsmart.utils to javafx.fxml;
+    exports de.gfn.coffeesystemsmart.db;
+    opens de.gfn.coffeesystemsmart.db to javafx.fxml;
 }

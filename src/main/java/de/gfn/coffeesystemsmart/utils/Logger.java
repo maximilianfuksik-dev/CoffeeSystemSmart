@@ -1,4 +1,4 @@
-package de.gfn.coffeesystemsmart.Repository;
+package de.gfn.coffeesystemsmart.utils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

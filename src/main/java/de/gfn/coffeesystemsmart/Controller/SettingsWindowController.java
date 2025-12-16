@@ -1,6 +1,6 @@
 package de.gfn.coffeesystemsmart.Controller;
 
-import de.gfn.coffeesystemsmart.Classes.LanguageChange;
+import de.gfn.coffeesystemsmart.config.LanguageChange;
 import de.gfn.coffeesystemsmart.MainApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
