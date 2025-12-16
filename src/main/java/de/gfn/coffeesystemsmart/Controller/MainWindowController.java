@@ -1,5 +1,6 @@
 package de.gfn.coffeesystemsmart.Controller;
 
+import de.gfn.coffeesystemsmart.Classes.LanguageChange;
 import de.gfn.coffeesystemsmart.MainApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -31,24 +32,34 @@ public class MainWindowController {
     @FXML
     public void btnSettings() throws IOException { // Bei Klick wird das neue Fenster "Settings" geöffnet
         FXMLLoader settingsLoader = new FXMLLoader(MainApplication.class.getResource("settings-window.fxml"));
-        settingsLoader.setResources(ResourceBundle.getBundle("lang.msg"));
+        settingsLoader.setResources(LanguageChange.getBundle());
 
-        Scene settings = new Scene(settingsLoader.load());
+        Scene settingsScene = new Scene(settingsLoader.load());
+
+        //Main-Stage etablieren:
+        Stage mainstage = (Stage) timeDate.getScene().getWindow();
+
+        // Controller erstellen an den die "Mainstage" (-> siehe SettingsWindowController) übergeben wird.
+        SettingsWindowController controller = settingsLoader.getController();
+        controller.setMainStage(mainstage);
 
         Stage settingsStage = new Stage();
-        settingsStage.setTitle(settingsLoader.getResources().getString("label.settings"));
-        settingsStage.setScene(settings);
+        controller.setSettingsStage(settingsStage);
+
+        settingsStage.initOwner(mainstage);
+        settingsStage.setTitle(LanguageChange.getBundle().getString("label.settings"));
+        settingsStage.setScene(settingsScene);
         settingsStage.show();
     }
     @FXML
     public void btnCoffeeChoice() throws IOException { // Bei Klick wird das neue Fenster "Settings" geöffnet
         FXMLLoader settingsLoader = new FXMLLoader(MainApplication.class.getResource("payment-window.fxml"));
-        settingsLoader.setResources(ResourceBundle.getBundle("lang.msg"));
+        settingsLoader.setResources(LanguageChange.getBundle());
 
         Scene settings = new Scene(settingsLoader.load());
 
         Stage settingsStage = new Stage();
-        settingsStage.setTitle(settingsLoader.getResources().getString("label.payment"));
+        settingsStage.setTitle(LanguageChange.getBundle().getString("label.settings"));
         settingsStage.setScene(settings);
         settingsStage.show();
     }

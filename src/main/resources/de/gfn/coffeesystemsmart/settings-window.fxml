@@ -8,13 +8,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.SettingsWindowController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.SettingsWindowController">
    <children>
       <Label alignment="CENTER" layoutX="115.0" layoutY="12.0" prefHeight="38.0" prefWidth="134.0" text="%label.settings" />
       <MenuButton layoutX="270.0" layoutY="51.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="%menuBtn.lang">
         <items>
-          <MenuItem mnemonicParsing="false" text="%menuBtn.lang2" />
-          <MenuItem mnemonicParsing="false" text="%menuBtn.lang3" />
+          <MenuItem mnemonicParsing="false" text="%menuBtn.lang2" onAction="#switchToGerman" />
+          <MenuItem mnemonicParsing="false" text="%menuBtn.lang3" onAction="#switchToEnglish" />
         </items>
       </MenuButton>
       <Button layoutX="32.0" layoutY="52.0" mnemonicParsing="false" text="%btn.adminLog" />
