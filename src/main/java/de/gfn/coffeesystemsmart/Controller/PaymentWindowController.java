@@ -29,7 +29,7 @@ public class PaymentWindowController {
         Scene cashPay = new Scene(cashPayLoader.load());
 
         Stage cashPayStage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Altes Fenster wird wiederverwertet
-        cashPayStage.setTitle(LanguageChange.getBundle().getString("label.settings"));
+        cashPayStage.setTitle(LanguageChange.getBundle().getString("label.cashpay"));
         cashPayStage.setScene(cashPay);
         cashPayStage.show();
     }
@@ -42,7 +42,7 @@ public class PaymentWindowController {
         Scene creditPay = new Scene(creditPayLoader.load());
 
         Stage creditPayStage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Altes Fenster wird wiederverwertet
-        creditPayStage.setTitle(LanguageChange.getBundle().getString("label.settings"));
+        creditPayStage.setTitle(LanguageChange.getBundle().getString("label.cardCredit"));
         creditPayStage.setScene(creditPay);
         creditPayStage.show();
     }

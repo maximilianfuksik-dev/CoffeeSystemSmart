@@ -59,7 +59,7 @@ public class MainWindowController {
         Scene settings = new Scene(settingsLoader.load());
 
         Stage settingsStage = new Stage();
-        settingsStage.setTitle(LanguageChange.getBundle().getString("label.settings"));
+        settingsStage.setTitle(LanguageChange.getBundle().getString("label.payment"));
         settingsStage.setScene(settings);
         settingsStage.show();
     }
