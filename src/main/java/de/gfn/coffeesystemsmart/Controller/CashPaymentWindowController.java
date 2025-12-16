@@ -32,4 +32,5 @@ public class CashPaymentWindowController {
     btn.fiveCent
     */
     // Methode zum Abgleichen von Preis und Input! -> Dann erst "Accept" drückbar.
+    // Bei Accept wird dann der Preis abgezogen und die Bestellung fertiggemacht
 }

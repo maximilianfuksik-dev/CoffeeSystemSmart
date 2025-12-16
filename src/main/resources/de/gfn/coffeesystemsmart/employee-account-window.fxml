@@ -10,8 +10,8 @@
       <Label layoutX="217.0" layoutY="27.0" prefHeight="35.0" prefWidth="166.0" text="%label.employeeAcc" />
       <TextField fx:id="personnelNumber" layoutX="122.0" layoutY="84.0" promptText="%txt.personnelNumber" />
       <Button layoutX="308.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="%btn.personnelchip" />
-      <Label fx:id="creditAmount" layoutX="52.0" layoutY="329.0" prefHeight="50.0" prefWidth="266.0" text="Guthaben-Anzeige" />
+      <Label fx:id="creditAmount" layoutX="52.0" layoutY="329.0" prefHeight="50.0" prefWidth="194.0" text="Guthaben-Anzeige" />
       <Button layoutX="123.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="%btn.accept" />
-      <Button layoutX="511.0" layoutY="27.0" mnemonicParsing="false" text="%btn.cancel" />
+      <Button layoutX="260.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnCancel" text="%btn.cancel" />
    </children>
 </AnchorPane>
