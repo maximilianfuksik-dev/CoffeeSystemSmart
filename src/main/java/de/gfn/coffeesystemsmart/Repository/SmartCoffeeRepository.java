@@ -1,8 +1,18 @@
 package de.gfn.coffeesystemsmart.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class SmartCoffeeRepository {
 
-
+// Kein SQL im Controller
+// Kein JavaFX im Repository
+// Keine DB-Connection im FXML
+//
+// Repository = Daten
+// Service = Logik
+// Controller = Anzeige
 
     // Link Methods Linking Object
     // UpdateMethod
@@ -22,4 +32,6 @@ public class SmartCoffeeRepository {
 
     // Method for Fail if Stock is < x (not DB) but should be a Datatyp in DB
     // Method for Workerdiscount
+
+
 }

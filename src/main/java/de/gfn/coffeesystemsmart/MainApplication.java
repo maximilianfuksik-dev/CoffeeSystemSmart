@@ -29,15 +29,15 @@ public class MainApplication extends Application {
         splashStage.setTitle("Loading...");
         splashStage.show();
 
-        // Timer
+        // Timer wird gestartet
         PauseTransition pause = new PauseTransition(Duration.seconds(5));
 
         pause.setOnFinished(event -> {
-            splashStage.close();
+            splashStage.close(); //<-- Timer wird geschlossen
 
             try {
 
-                // Start Main Window
+                // Start Main Window in einem Try Catch für IOExceptions
                 FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
 
                 ResourceBundle bundle = ResourceBundle.getBundle("lang.msg");

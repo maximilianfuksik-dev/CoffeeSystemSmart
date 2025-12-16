@@ -2,6 +2,15 @@ package de.gfn.coffeesystemsmart.Repository;
 
 public class StatRepository {
 
+    // Kein SQL im Controller
+// Kein JavaFX im Repository
+// Keine DB-Connection im FXML
+//
+// Repository = Daten
+// Service = Logik
+// Controller = Anzeige
+
+
     // Method for counting the all orders
     // UpdateMethod
     // Method for evaluating data by type
@@ -15,7 +24,7 @@ public class StatRepository {
     // Mfilter by consumption Milk / Water / Coffeebeans (Sort by Day , Week , Month, Year, All Time )
     // Mfilter by defect (Sort  All Time)
 
-    // Method for Connection to Database
+// Method for Connection to Database
 
 
     // Method for implementing the data onto the charts
