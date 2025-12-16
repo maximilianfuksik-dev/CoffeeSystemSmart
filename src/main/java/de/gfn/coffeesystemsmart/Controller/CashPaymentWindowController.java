@@ -1,12 +1,17 @@
 package de.gfn.coffeesystemsmart.Controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
-import java.awt.*;
 
 public class CashPaymentWindowController {
     @FXML
     private Label pricing;
+
+    @FXML
+    private Label inputCoin;
+
+
 
     /*
     Methoden für onActionPress:

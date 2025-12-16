@@ -40,6 +40,18 @@ public class MainWindowController {
         settingsStage.setScene(settings);
         settingsStage.show();
     }
+    @FXML
+    public void btnCoffeeChoice() throws IOException { // Bei Klick wird das neue Fenster "Settings" geöffnet
+        FXMLLoader settingsLoader = new FXMLLoader(MainApplication.class.getResource("payment-window.fxml"));
+        settingsLoader.setResources(ResourceBundle.getBundle("lang.msg"));
+
+        Scene settings = new Scene(settingsLoader.load());
+
+        Stage settingsStage = new Stage();
+        settingsStage.setTitle(settingsLoader.getResources().getString("label.payment"));
+        settingsStage.setScene(settings);
+        settingsStage.show();
+    }
 
     public void initialize() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
