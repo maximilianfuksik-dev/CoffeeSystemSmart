@@ -17,11 +17,11 @@
             <Font size="32.0" />
          </font>
       </Label>
-       <ImageView fitHeight="129.0" fitWidth="159.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-           <image>
-               <Image url="@images/Kaffetest.jpg" />
-           </image>
-       </ImageView>
+      <ImageView fitHeight="129.0" fitWidth="159.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Kaffetest.jpg" />
+         </image>
+      </ImageView>
       <Label fx:id="timeDate" layoutX="629.0" layoutY="14.0" prefHeight="35.0" prefWidth="139.0" text="Uhrzeit / datum" />
       <Button layoutX="351.0" layoutY="497.0" onAction="#btnExit" mnemonicParsing="false" text="%btn.cancel" />
       <Button layoutX="14.0" layoutY="551.0" onAction="#btnSettings" mnemonicParsing="false" text="%btn.settings" />
