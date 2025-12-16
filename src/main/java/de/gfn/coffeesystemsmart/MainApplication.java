@@ -1,5 +1,7 @@
 package de.gfn.coffeesystemsmart;
 
+import de.gfn.coffeesystemsmart.Controller.MainWindowController;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,6 +9,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
+
+
 
 public class MainApplication extends Application {
 
@@ -29,4 +33,5 @@ public class MainApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }

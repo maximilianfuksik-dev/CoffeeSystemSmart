@@ -24,7 +24,7 @@
        </ImageView>
       <Label fx:id="timeDate" layoutX="629.0" layoutY="14.0" prefHeight="35.0" prefWidth="139.0" text="Uhrzeit / datum" />
       <Button layoutX="351.0" layoutY="497.0" onAction="#btnExit" mnemonicParsing="false" text="%btn.cancel" />
-      <Button layoutX="14.0" layoutY="551.0" mnemonicParsing="false" text="%btn.settings" />
+      <Button layoutX="14.0" layoutY="551.0" onAction="#btnSettings" mnemonicParsing="false" text="%btn.settings" />
       <GridPane layoutX="183.0" layoutY="139.0" prefHeight="313.0" prefWidth="411.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

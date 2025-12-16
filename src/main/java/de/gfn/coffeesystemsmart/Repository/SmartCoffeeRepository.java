@@ -2,6 +2,8 @@ package de.gfn.coffeesystemsmart.Repository;
 
 public class SmartCoffeeRepository {
 
+
+
     // Link Methods Linking Object
     // UpdateMethod
     // Method for Button Order  (Enum)Switch
