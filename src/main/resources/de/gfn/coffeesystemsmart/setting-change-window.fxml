@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.SettingChangeWindowController">
    <children>
       <TableView layoutX="26.0" layoutY="14.0" prefHeight="290.0" prefWidth="545.0">
@@ -14,7 +13,8 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button layoutX="175.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeSave" />
-      <Button layoutX="325.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeDiscard" />
+      <Button layoutX="72.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeSave" />
+      <Button layoutX="391.0" layoutY="348.0" mnemonicParsing="false" text="%btn.changeDiscard" />
+      <Button layoutX="231.0" layoutY="348.0" mnemonicParsing="false" text="%btn.getData" />
    </children>
 </AnchorPane>

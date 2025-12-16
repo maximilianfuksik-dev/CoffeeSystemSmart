@@ -18,14 +18,14 @@
         </items>
       </MenuButton>
       <Button layoutX="32.0" layoutY="52.0" mnemonicParsing="false" text="%btn.adminLog" />
-      <Button layoutX="32.0" layoutY="90.0" mnemonicParsing="false" text="%btn.printReport" />
-      <Button layoutX="137.0" layoutY="52.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="%btn.changes" />
+      <Button layoutX="32.0" layoutY="90.0" mnemonicParsing="false" onAction="#btnPrintReport" text="%btn.printReport" />
+      <Button layoutX="137.0" layoutY="52.0" mnemonicParsing="false" onAction="#btnChanges" prefHeight="26.0" prefWidth="101.0" text="%btn.changes" />
       <Button layoutX="133.0" layoutY="205.0" mnemonicParsing="false" text="%btn.fillCoffee" />
       <Button layoutX="135.0" layoutY="287.0" mnemonicParsing="false" text="%btn.fillMilk" />
       <Button layoutX="137.0" layoutY="170.0" mnemonicParsing="false" text="%btn.cleanRepair" />
       <Button layoutX="274.0" layoutY="421.0" mnemonicParsing="false" text="%btn.darkMode" />
       <Button layoutX="152.0" layoutY="421.0" mnemonicParsing="false" text="%btn.back" />
-      <Button layoutX="18.0" layoutY="421.0" mnemonicParsing="false" text="%btn.turnOff" />
+      <Button layoutX="18.0" layoutY="421.0" mnemonicParsing="false" onAction="#btnTurnOffMachine" text="%btn.turnOff" />
       <ImageView fitHeight="38.0" fitWidth="200.0" layoutX="83.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/Loading.png" />
