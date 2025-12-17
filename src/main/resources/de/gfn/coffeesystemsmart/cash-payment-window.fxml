@@ -10,7 +10,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style/stylesheet.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.CashPaymentWindowController">
    <children>
       <Label alignment="CENTER" layoutX="215.0" layoutY="14.0" prefHeight="63.0" prefWidth="169.0" text="%label.cashpay" />
-      <Label fx:id="pricing" alignment="CENTER" layoutX="238.0" layoutY="77.0" prefHeight="54.0" prefWidth="123.0" text="" />
+      <Label fx:id="pricing" alignment="CENTER" layoutX="238.0" layoutY="77.0" prefHeight="54.0" prefWidth="123.0" text="null" />
       <Button layoutX="198.0" layoutY="327.0" mnemonicParsing="false" text="%btn.accept" />
       <Button layoutX="342.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnCancel" text="%btn.cancel" />
       <GridPane layoutX="200.0" layoutY="139.0">

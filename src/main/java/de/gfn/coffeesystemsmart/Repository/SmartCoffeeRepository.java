@@ -42,7 +42,7 @@ public class SmartCoffeeRepository {
         return get("SELECT * FROM Coffeetable ");
     }
 
-    private static List<CoffeeEntity> get(final String SQL) throws SQLException {
+    public static List<CoffeeEntity> get(final String SQL) throws SQLException {
         try (Connection conn = DatabaseUtils.getConnection();) {
             Statement stmt = conn.createStatement(); // Anfrage-Objekt erzeugen
             stmt.execute(SQL);

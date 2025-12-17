@@ -1,21 +1,26 @@
 package de.gfn.coffeesystemsmart.Controller;
 
 import de.gfn.coffeesystemsmart.Classes.Coffee;
+import de.gfn.coffeesystemsmart.Classes.CoffeeEntity;
+import de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
 import java.text.NumberFormat;
+import java.util.List;
 import java.util.Locale;
 
 public class CashPaymentWindowController {
     @FXML
     private Label pricing; //<-- Label für den Preis
-
     @FXML
     private Label inputCoin;
+
+    private Coffee coffee;
 
     private int cents = 0; // <-- aktueller "Münzeinwurf" in Cent
 
@@ -30,7 +35,8 @@ public class CashPaymentWindowController {
 
     @FXML
     private void initialize() {
-        updateLabel();
+        updateLabelInput();
+        //updateLabelPricing();
     }
 
     @FXML
@@ -61,15 +67,17 @@ public class CashPaymentWindowController {
     @FXML
     private void reset() {
         cents = 0;
-        updateLabel();
+        updateLabelInput();
     }
+
+
 
     private void addCoin(int add) {
         cents += add;
-        updateLabel();
+        updateLabelInput();
     }
 
-    private void updateLabel() {
+    private void updateLabelInput() {
         inputCoin.setText(currency.format(cents / 100.0));
     }
 
@@ -80,21 +88,16 @@ public class CashPaymentWindowController {
     public void setCents(int cents) {
     }
 
-    public void setPricing(Coffee coffee){
-        pricing.setText(String.valueOf(coffee.getPrice()));
+    public static List<CoffeeEntity> findAllCoffee(int id) throws SQLException {
+        return SmartCoffeeRepository.get("SELECT * FROM Coffeetable WHERE id= "+id);
     }
 
-    /*
-    Pricing soll sich den Preis des ausgeählten Kaffee's aus der DB holen.
+    public void updateLabelPricing(int id){
+        pricing.setText(currency.format(coffee.getPrice()));
+    }
 
-    Methoden für onActionPres="": Methoden sollen dem "Input" Feld ihren Wert beifügen. -> Reset-Knopf?
-    btn.twoEur
-    btn.oneEur
-    btn.fiftyCent
-    btn.twentyCent
-    btn.tenCent
-    btn.fiveCent
-    */
+    // Pricing soll sich den Preis des ausgeählten Kaffee's aus der DB holen.
+
     // Methode zum Abgleichen von Preis und Input! -> Dann erst "Accept" drückbar.
     // Bei Accept wird dann der Preis abgezogen und die Bestellung fertiggemacht
 }

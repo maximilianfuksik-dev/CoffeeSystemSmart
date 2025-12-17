@@ -36,12 +36,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="100.0" onAction="#btnCoffeeChoice" prefWidth="205.0" text="%btn.opt1" />
-            <Button mnemonicParsing="false" prefHeight="100.0" onAction="#btnCoffeeChoice" prefWidth="205.0" text="%btn.opt2" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="106.0" onAction="#btnCoffeeChoice" prefWidth="207.0" text="%btn.opt3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="107.0" onAction="#btnCoffeeChoice" prefWidth="208.0" text="%btn.opt4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="111.0" onAction="#btnCoffeeChoice" prefWidth="212.0" text="%btn.opt5" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="105.0" onAction="#btnCoffeeChoice" prefWidth="206.0" text="%btn.opt6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="100.0" onAction="#btnCoffeeChoice" prefWidth="205.0" text="%btn.opt1" userData="1" />
+            <Button mnemonicParsing="false" prefHeight="100.0" onAction="#btnCoffeeChoice" prefWidth="205.0" text="%btn.opt2" userData="2" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="106.0" onAction="#btnCoffeeChoice" prefWidth="207.0" text="%btn.opt3" userData="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="107.0" onAction="#btnCoffeeChoice" prefWidth="208.0" text="%btn.opt4" userData="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="111.0" onAction="#btnCoffeeChoice" prefWidth="212.0" text="%btn.opt5" userData="5" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="105.0" onAction="#btnCoffeeChoice" prefWidth="206.0" text="%btn.opt6" userData="6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
