@@ -19,7 +19,7 @@ public class SmartCoffeeRepository {
 
     public static double getPricebyCoffeeID(int id) {
         //SQL Befehl
-        String SQL = "SELECT Coffeeprice FROM Coffeetable WHERE CoffeetypeID = ?";
+        String SQL = "SELECT CoffeePrice FROM Coffeetable WHERE CoffeeTypeID = ?";
 
         try (Connection conn = DatabaseUtils.getConnection();
              PreparedStatement ps = conn.prepareStatement(SQL))

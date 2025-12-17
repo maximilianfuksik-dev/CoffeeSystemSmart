@@ -1,5 +1,6 @@
 package de.gfn.coffeesystemsmart.Controller;
 
+import de.gfn.coffeesystemsmart.Classes.Coffee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -11,7 +12,7 @@ import java.util.Locale;
 
 public class CashPaymentWindowController {
     @FXML
-    private Label pricing;
+    private Label pricing; //<-- Label für den Preis
 
     @FXML
     private Label inputCoin;
@@ -75,6 +76,14 @@ public class CashPaymentWindowController {
     @FXML
     private void acceptPay() {
     }
+
+    public void setCents(int cents) {
+    }
+
+    public void setPricing(Coffee coffee){
+        pricing.setText(String.valueOf(coffee.getPrice()));
+    }
+
     /*
     Pricing soll sich den Preis des ausgeählten Kaffee's aus der DB holen.
 
