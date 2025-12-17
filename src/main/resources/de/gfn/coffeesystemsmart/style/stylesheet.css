@@ -83,11 +83,10 @@
     -fx-padding: 10px 20px;
     -fx-font-size: 14px;
     -fx-font-weight: 500;
-    -fx-background-radius: -fx-radius-md;
-    -fx-border-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
     -fx-cursor: hand;
     -fx-effect: -fx-shadow-sm;
-    -fx-transition: all 0.2s;
 }
 
 .button:hover {
@@ -158,8 +157,8 @@
     -fx-background-color: -fx-dark-card;
     -fx-text-fill: -fx-dark-text;
     -fx-font-size: 14px;
-    -fx-background-radius: -fx-radius-md;
-    -fx-border-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
     -fx-border-color: transparent;
     -fx-padding: 12px 16px;
     -fx-effect: -fx-shadow-sm;
@@ -179,15 +178,15 @@
 
 .text-area .content {
     -fx-background-color: -fx-dark-card;
-    -fx-background-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
 }
 
 /* === COMBOBOX === */
 .combo-box {
     -fx-background-color: -fx-dark-card;
     -fx-text-fill: -fx-dark-text;
-    -fx-background-radius: -fx-radius-md;
-    -fx-border-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
     -fx-padding: 10px;
     -fx-effect: -fx-shadow-sm;
 }
@@ -199,7 +198,7 @@
 
 .combo-box .list-view {
     -fx-background-color: -fx-dark-card;
-    -fx-background-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
 }
 
 .combo-box .list-cell:hover {
@@ -216,8 +215,8 @@
 .check-box .box, .radio-button .radio {
     -fx-background-color: -fx-dark-card;
     -fx-border-color: -fx-muted-text;
-    -fx-border-radius: -fx-radius-sm;
-    -fx-background-radius: -fx-radius-sm;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
 }
 
 .check-box:selected .mark, .radio-button:selected .dot {
@@ -228,7 +227,7 @@
 .table-view {
     -fx-background-color: -fx-dark-surface;
     -fx-border-color: transparent;
-    -fx-background-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
     -fx-effect: -fx-shadow-sm;
 }
 
@@ -274,7 +273,7 @@
 
 .tab-pane .tab {
     -fx-background-color: -fx-dark-card;
-    -fx-background-radius: -fx-radius-md -fx-radius-md 0 0;
+    -fx-background-radius: 8px;
     -fx-text-fill: -fx-muted-text;
     -fx-font-weight: 500;
     -fx-padding: 12px 24px;
@@ -314,8 +313,8 @@
 /* === CUSTOM KARTEN/CONTAINER === */
 .card {
     -fx-background-color: -fx-dark-card;
-    -fx-background-radius: -fx-radius-lg;
-    -fx-padding: -fx-spacing-lg;
+    -fx-background-radius: 8px;
+    -fx-padding: 24px;
     -fx-effect: -fx-shadow-md;
     -fx-border-color: transparent;
 }
@@ -345,7 +344,7 @@
 
 .context-menu {
     -fx-background-color: -fx-dark-card;
-    -fx-background-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
     -fx-effect: -fx-shadow-lg;
 }
 
@@ -382,7 +381,7 @@
 .tooltip {
     -fx-background-color: -fx-dark-card;
     -fx-text-fill: -fx-dark-text;
-    -fx-background-radius: -fx-radius-md;
+    -fx-background-radius: 8px;
     -fx-effect: -fx-shadow-lg;
     -fx-font-size: 12px;
     -fx-padding: 8px 12px;
