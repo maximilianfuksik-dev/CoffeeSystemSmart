@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DatabaseUtils {
 
-    private static final String DSN = "jdbc:sqlite:data.db";
+    private static final String DSN = "jdbc:sqlite:dbtest.db";
 
     private DatabaseUtils() {}
 
