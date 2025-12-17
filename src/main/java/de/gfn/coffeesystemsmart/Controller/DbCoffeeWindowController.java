@@ -12,7 +12,7 @@ import javafx.scene.control.TableView;
 import java.sql.SQLException;
 
 import static de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository.findAllCoffee;
-import static de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository.getPricebyCoffeeID;
+
 
 public class DbCoffeeWindowController {
 

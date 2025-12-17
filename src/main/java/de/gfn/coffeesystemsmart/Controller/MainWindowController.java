@@ -1,12 +1,15 @@
 package de.gfn.coffeesystemsmart.Controller;
 
+import de.gfn.coffeesystemsmart.Classes.CoffeeEntity;
 import de.gfn.coffeesystemsmart.config.LanguageChange;
 import de.gfn.coffeesystemsmart.MainApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -15,6 +18,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import static de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository.findCoffeeById;
 import static javafx.application.Platform.exit;
 
 
@@ -51,16 +55,32 @@ public class MainWindowController {
         settingsStage.show();
     }
     @FXML
-    public void btnCoffeeChoice() throws IOException { // Bei Klick wird das neue Fenster "Settings" geöffnet
-        FXMLLoader settingsLoader = new FXMLLoader(MainApplication.class.getResource("payment-window.fxml"));
-        settingsLoader.setResources(LanguageChange.getBundle());
+    public void btnCoffeeChoice(ActionEvent event) throws IOException {// Bei Klick wird das neue Fenster "Settings" geöffnet
 
-        Scene settings = new Scene(settingsLoader.load());
+        Button btn = (Button) event.getSource();
+        int coffeeId = Integer.parseInt(btn.getUserData().toString());
 
-        Stage settingsStage = new Stage();
-        settingsStage.setTitle(LanguageChange.getBundle().getString("label.payment"));
-        settingsStage.setScene(settings);
-        settingsStage.show();
+        CoffeeEntity coffee;
+        try{
+            coffee = findCoffeeById(coffeeId);
+            if (coffee == null) return;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+
+        FXMLLoader paymentLoader = new FXMLLoader(MainApplication.class.getResource("payment-window.fxml"));
+        paymentLoader.setResources(LanguageChange.getBundle());
+
+        Scene payment = new Scene(paymentLoader.load());
+
+        PaymentWindowController controller = paymentLoader.getController();
+        controller.setCoffee(coffee);
+
+        Stage paymentStage = new Stage();
+        paymentStage.setTitle(LanguageChange.getBundle().getString("label.payment"));
+        paymentStage.setScene(payment);
+        paymentStage.show();
     }
 
     public void initialize() {

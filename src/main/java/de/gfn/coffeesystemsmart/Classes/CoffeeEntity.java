@@ -10,7 +10,14 @@ public class CoffeeEntity implements Coffee{
 
     private int mLiter;
 
+
     public CoffeeEntity(){}
+
+    public CoffeeEntity(int id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
 
     public CoffeeEntity(int id, String name, double price, int mLiter) {
         this.id = id;

@@ -18,24 +18,43 @@ public class SmartCoffeeRepository {
 // Service = Logik
 // Controller = Anzeige
 
-    public static double getPricebyCoffeeID(int id) {
-        //SQL Befehl
-        String SQL = "SELECT CoffeePrice FROM Coffeetable WHERE CoffeeTypeID = ?";
+//    public static double getPricebyCoffeeID(int id) {
+//        //SQL Befehl
+//        String SQL = "SELECT CoffeePrice FROM Coffeetable WHERE CoffeeTypeID = ?";
+//
+//        try (Connection conn = DatabaseUtils.getConnection();
+//             PreparedStatement ps = conn.prepareStatement(SQL))
+//        {
+//            ps.setInt(1,id);
+//            ResultSet rs = ps.executeQuery();
+//
+//            if(rs.next()) {
+//                return rs.getDouble("CoffeePrice");
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return 0.0;
+//    }
+    public static CoffeeEntity findCoffeeById(int id) throws SQLException {
+        String sql = "Select CoffeeTypeID, CoffeeName, CoffeePrice FROM CoffeeTable WHERE CoffeeTypeID = ?";
 
-        try (Connection conn = DatabaseUtils.getConnection();
-             PreparedStatement ps = conn.prepareStatement(SQL))
-        {
-            ps.setInt(1,id);
+        try(Connection conn = DatabaseUtils.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
-            if(rs.next()) {
-                return rs.getDouble("CoffeePrice");
+            if (rs.next()) {
+                return new CoffeeEntity(
+                        rs.getInt("CoffeeTypeID"),
+                        rs.getString("CoffeeName"),
+                        rs.getDouble("CoffeePrice")
+                );
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            return null;
         }
-        return 0.0;
     }
 
     public static List<CoffeeEntity> findAllCoffee() throws SQLException {
