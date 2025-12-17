@@ -1,18 +1,22 @@
 package de.gfn.coffeesystemsmart.Classes;
 
-public class CoffeeEntity  implements Coffee{
+public class CoffeeEntity implements Coffee{
 
-    private final int id;  // CoffeeTypeID
+    private int id;  // CoffeeTypeID
 
-    private final String name;
+    private String name;
 
-    private final double price; // CofffeePrice
+    private double price; // CofffeePrice
 
+    private int mLiter;
 
-    CoffeeEntity(int id, String name, double price) {
+    public CoffeeEntity(){}
+
+    public CoffeeEntity(int id, String name, double price, int mLiter) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.mLiter = mLiter;
     }
 
 
@@ -34,5 +38,27 @@ public class CoffeeEntity  implements Coffee{
     @Override
     public int getMLiter() { //<-- ohne Funktion bis jetzt
         return 0;
+    }
+
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getmLiter() {
+        return mLiter;
+    }
+
+    public void setmLiter(int mLiter) {
+        this.mLiter = mLiter;
     }
 }

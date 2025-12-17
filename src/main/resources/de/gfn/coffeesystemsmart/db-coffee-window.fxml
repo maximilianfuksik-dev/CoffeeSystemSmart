@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.gfn.coffeesystemsmart.Controller.DbCoffeeWindowController">
+   <children>
+      <TableView fx:id="coffeeTable" layoutX="14.0" layoutY="14.0" prefHeight="361.0" prefWidth="570.0">
+          <columns>
+              <TableColumn fx:id="coffeeTypeID" prefWidth="75.0" text="ID"/>
+              <TableColumn fx:id="coffeeName" prefWidth="75.0" text="%column.coffeename"/>
+              <TableColumn fx:id="coffeePrice" prefWidth="75.0" text="%column.coffeeprices"/>
+              <TableColumn fx:id="coffeeConLiter" prefWidth="75.0" text="%column.coffeConLiter"/>
+          </columns>
+      </TableView>
+      <Button layoutX="176.0" layoutY="446.0" mnemonicParsing="false" text="%btn.getData" />
+      <Button layoutX="315.0" layoutY="446.0" mnemonicParsing="false" text="%btn.cancel" />
+   </children>
+</AnchorPane>

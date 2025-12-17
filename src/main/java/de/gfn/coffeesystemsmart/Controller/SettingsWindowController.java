@@ -44,7 +44,7 @@ public class SettingsWindowController {
 
     @FXML
     public void btnChanges(ActionEvent event) throws IOException {
-        FXMLLoader chartLoader = new FXMLLoader(MainApplication.class.getResource("setting-change-window.fxml"));
+        FXMLLoader chartLoader = new FXMLLoader(MainApplication.class.getResource("db-coffee-window.fxml"));
         chartLoader.setResources(LanguageChange.getBundle());
 
         Scene settings = new Scene(chartLoader.load());

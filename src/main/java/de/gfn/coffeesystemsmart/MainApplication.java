@@ -1,9 +1,7 @@
 package de.gfn.coffeesystemsmart;
 
 
-import de.gfn.coffeesystemsmart.Controller.MainWindowController;
 import javafx.animation.PauseTransition;
-import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
