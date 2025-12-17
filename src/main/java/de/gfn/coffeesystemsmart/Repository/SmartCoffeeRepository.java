@@ -60,7 +60,7 @@ public class SmartCoffeeRepository {
         CoffeeEntity c = new CoffeeEntity();
         c.setId(row.getInt("CoffeeTypeID"));
         c.setName(row.getString("CoffeeName"));
-        c.setPrice(row.getInt("CoffeePrice"));
+        c.setPrice(row.getDouble("CoffeePrice"));
         c.setmLiter(row.getInt("ConLiter"));
         return c;
     }
