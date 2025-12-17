@@ -1,7 +1,10 @@
 package de.gfn.coffeesystemsmart.Repository;
 
+import de.gfn.coffeesystemsmart.db.DatabaseUtils;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SmartCoffeeRepository {
@@ -14,7 +17,25 @@ public class SmartCoffeeRepository {
 // Service = Logik
 // Controller = Anzeige
 
-    // Hier soll nur die ORDER gespeichert werden in der DB
+    public static double getPricebyCoffeeID(int id) {
+        //SQL Befehl
+        String SQL = "SELECT Coffeeprice FROM Coffeetable WHERE CoffeetypeID = ?";
+
+        try (Connection conn = DatabaseUtils.getConnection();
+             PreparedStatement ps = conn.prepareStatement(SQL))
+        {
+            ps.setInt(1,id);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+                return rs.getDouble("CoffeePrice");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0.0;
+    }
 
 
 
