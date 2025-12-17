@@ -24,12 +24,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="2€" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0" text="1€" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="158.0" text="0,50€" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" text="0,20€" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="110.0" prefWidth="198.0" text="0,10€" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="139.0" text="0,05€" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" onAction="#twoEur" text="2€" />
+            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0" onAction="#oneEur" text="1€" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="158.0" onAction="#fiftyCents" text="0,50€" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="142.0" onAction="#twentyCents" text="0,20€" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="110.0" prefWidth="198.0" onAction="#tenCents" text="0,10€" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="139.0" onAction="#fiveCents" text="0,05€" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <Label fx:id="inputCoin" alignment="CENTER" layoutX="238.0" layoutY="244.0" prefHeight="54.0" prefWidth="123.0" text="0,00 €" />
