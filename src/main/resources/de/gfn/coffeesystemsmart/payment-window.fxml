@@ -28,7 +28,7 @@
         </rowConstraints>
          <children>
             <Button mnemonicParsing="false" prefHeight="228.0" prefWidth="182.0" onAction="#btnCashPay" text="%btn.cashpay" />
-            <Button mnemonicParsing="false" prefHeight="506.0" prefWidth="358.0" onAction="#btnCreditPay" text="%btn.cardCredit" GridPane.columnIndex="1" />
+            <Button fx:id="creditBtn" mnemonicParsing="false" prefHeight="506.0" prefWidth="358.0" onAction="#btnCreditPay" text="%btn.cardCredit" GridPane.columnIndex="1" />
          </children>
       </GridPane>
       <Label fx:id="orderPrice" layoutX="154.0" layoutY="95.0" prefHeight="70.0" prefWidth="330.0"/>

@@ -19,6 +19,7 @@ import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 public class CashPaymentWindowController {
     @FXML
@@ -29,6 +30,8 @@ public class CashPaymentWindowController {
     @FXML
     private Button acceptBtn;
 
+
+    private boolean isBroken;
     private Coffee coffee;
     private boolean employee;
     private int discountPercent = 0;
@@ -39,7 +42,7 @@ public class CashPaymentWindowController {
 
     private void updateAcceptEnabled() {
         acceptBtn.setDisable(cents < getPriceCents());
-    }
+    } // Accept-Btn wird ausgegraut, wenn noch nicht genug Geld eingezahlt wurde.
 
 
     public void setCoffee(Coffee coffee) {
@@ -47,22 +50,23 @@ public class CashPaymentWindowController {
         pricing.setText(String.format(Locale.GERMANY, "%.2f €", coffee.getPrice()));
         updateLabel();
         updateAcceptEnabled();
-    }
+    } // Konstruktor zum weitergeben, des Kaffee-Preis (Label wird geupdated + Btn.accept wird gecheckt.
 
     private void updateLabel() {
         inputCoin.setText(String.format(currency.format(cents / 100.0)));
-    }
+    } // aktualisiert den Input
 
-    public void setDiscountPercent(int id) {
+
+    public void setDiscountPercent(int discountPercent) {
         this.discountPercent = discountPercent;
         updateLabelPricing();
         updateAcceptEnabled();
-    }
+    } // Discount-setter (Übergabe)
 
     public void setEmployee(boolean employee) {
         this.employee = employee;
         updateLabelPricing();
-    }
+    } // Employee Boolean übergabe ans nächste Fenster
 
     private int getPriceCents() {
         if (coffee == null) return 0;
@@ -132,12 +136,13 @@ public class CashPaymentWindowController {
     }
 
     @FXML
-    private void btnAcceptPay() throws IOException {
+    private void btnAcceptPay(ActionEvent event) throws IOException {
         if (coffee == null) return;
 
         int priceCents = (int) Math.round(coffee.getPrice() * 100.0);
         boolean enough = cents >= priceCents;
-        if(enough) {
+        machineBreaks();
+        if(enough && isBroken) {
             FXMLLoader finishLoader = new FXMLLoader(MainApplication.class.getResource("coffee-in-progress-window.fxml"));
             finishLoader.setResources(LanguageChange.getBundle());
 
@@ -146,11 +151,11 @@ public class CashPaymentWindowController {
             CoffeeInProgressWindowController controller = finishLoader.getController();
             controller.setCoffee(coffee);
 
-            Stage finishStage = new Stage();
-            finishStage.setTitle(LanguageChange.getBundle().getString("label.inProgress"));
-            finishStage.setScene(finish);
-            finishStage.show();
-        } else{
+            Stage cashPayStage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Altes Fenster wird wiederverwertet
+            cashPayStage.setTitle(LanguageChange.getBundle().getString("label.inProgress"));
+            cashPayStage.setScene(finish);
+            cashPayStage.show();
+        } else{ // Nicht mehr notwendig, da button ausgegraut wird, wenn nicht genug Input
             FXMLLoader errorLoader = new FXMLLoader(MainApplication.class.getResource("error-view.fxml"));
             errorLoader.setResources(LanguageChange.getBundle());
             Scene error = new Scene(errorLoader.load());
@@ -158,6 +163,29 @@ public class CashPaymentWindowController {
             errorStage.setTitle(LanguageChange.getBundle().getString("label.error"));
             errorStage.setScene(error);
             errorStage.show();
+        }
+    }
+    // Boolean Rückgabe einfügen und übergeben, damit der Button in Settings gedrückt werden kann.
+    private boolean machineBreaks() throws IOException {
+
+        Random rand = new Random();
+        int probability = rand.nextInt(101);
+        if (probability < 2) {
+            FXMLLoader errorLoader = new FXMLLoader(MainApplication.class.getResource("error-view.fxml"));
+            errorLoader.setResources(LanguageChange.getBundle());
+            Scene error = new Scene(errorLoader.load());
+
+            ErrorWindowController controller = errorLoader.getController();
+            controller.errorMsgCreate("error.msg.machineBreak");
+
+            Stage errorStage = new Stage();
+            errorStage.setTitle(LanguageChange.getBundle().getString("label.error"));
+            errorStage.setScene(error);
+            errorStage.show();
+            return isBroken = true;
+        }
+        else {
+            return isBroken = false;
         }
     }
 

@@ -7,5 +7,11 @@ import java.awt.*;
 public class ErrorWindowController {
 
     @FXML
-    private Label errorLabel;
+    public Label errorLabel;
+
+    public void errorMsgCreate(String msg) {
+        errorLabel.setText(msg);
+    }
+
+
 }

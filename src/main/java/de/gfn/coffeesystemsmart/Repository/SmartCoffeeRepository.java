@@ -18,25 +18,7 @@ public class SmartCoffeeRepository {
 // Service = Logik
 // Controller = Anzeige
 
-//    public static double getPricebyCoffeeID(int id) {
-//        //SQL Befehl
-//        String SQL = "SELECT CoffeePrice FROM Coffeetable WHERE CoffeeTypeID = ?";
-//
-//        try (Connection conn = DatabaseUtils.getConnection();
-//             PreparedStatement ps = conn.prepareStatement(SQL))
-//        {
-//            ps.setInt(1,id);
-//            ResultSet rs = ps.executeQuery();
-//
-//            if(rs.next()) {
-//                return rs.getDouble("CoffeePrice");
-//            }
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return 0.0;
-//    }
+
     public static CoffeeEntity findCoffeeById(int id) throws SQLException {
         String sql = "Select CoffeeTypeID, CoffeeName, CoffeePrice FROM CoffeeTable WHERE CoffeeTypeID = ?";
 
@@ -86,11 +68,49 @@ public class SmartCoffeeRepository {
 
 
 
+    public static String[] coffeeTipsDE = {
+            "Kaffee ist eines der meistgetrunkenen Getränke der Welt.",
+            "Die Kaffeepflanze stammt ursprünglich aus Äthiopien.",
+            "Es gibt über 100 Arten von Kaffeepflanzen, aber Arabica und Robusta sind die wichtigsten.",
+            "Arabica-Kaffee gilt als aromatischer und milder als Robusta.",
+            "Robusta-Kaffee enthält mehr Koffein als Arabica.",
+            "Koffein wirkt anregend auf das zentrale Nervensystem.",
+            "Kaffeebohnen sind eigentlich die gerösteten Samen einer Kaffeekirsche.",
+            "Der Röstgrad beeinflusst Geschmack, Säure und Bitterkeit des Kaffees.",
+            "Heller Röstkaffee enthält meist mehr Säure als dunkler Röstkaffee.",
+            "Espresso ist die Basis vieler Kaffeespezialitäten wie Cappuccino oder Latte Macchiato.",
+            "Kaffee wurde im 15. Jahrhundert erstmals in der arabischen Welt konsumiert.",
+            "Deutschland gehört zu den größten Kaffeekonsumenten Europas.",
+            "Kaffee enthält neben Koffein auch Antioxidantien.",
+            "Der Geschmack von Kaffee wird durch Herkunft, Boden und Klima beeinflusst.",
+            "Frisch gemahlener Kaffee schmeckt intensiver als vorgemahlener Kaffee.",
+            "Kaffee sollte luftdicht, kühl und dunkel gelagert werden.",
+            "Ein Cappuccino besteht klassisch aus Espresso, Milch und Milchschaum.",
+            "Entkoffeinierter Kaffee enthält immer noch geringe Mengen Koffein.",
+            "Die ideale Brühtemperatur für Kaffee liegt bei etwa 92 bis 96 Grad Celsius.",
+            "Kaffee kann die Konzentration und Aufmerksamkeit verbessern."
+    };
+    public static String[] coffeeTipsENG = {
+            "Coffee is one of the most consumed beverages in the world.",
+            "The coffee plant originally comes from Ethiopia.",
+            "There are over 100 species of coffee plants, but Arabica and Robusta are the most important.",
+            "Arabica coffee is considered more aromatic and milder than Robusta.",
+            "Robusta coffee contains more caffeine than Arabica.",
+            "Caffeine has a stimulating effect on the central nervous system.",
+            "Coffee beans are actually the roasted seeds of a coffee cherry.",
+            "The roast level influences the flavor, acidity, and bitterness of coffee.",
+            "Light roasts usually contain more acidity than dark roasts.",
+            "Espresso is the base for many coffee specialties such as cappuccino or latte macchiato.",
+            "Coffee was first consumed in the Arab world during the 15th century.",
+            "Germany is one of the largest coffee consumers in Europe.",
+            "Coffee contains antioxidants in addition to caffeine.",
+            "The taste of coffee is influenced by origin, soil, and climate.",
+            "Freshly ground coffee tastes more intense than pre-ground coffee.",
+            "Coffee should be stored airtight, cool, and away from light.",
+            "A classic cappuccino consists of espresso, milk, and milk foam.",
+            "Decaffeinated coffee still contains small amounts of caffeine.",
+            "The ideal brewing temperature for coffee is about 92 to 96 degrees Celsius.",
+            "Coffee can improve concentration and alertness."
 
-
-
-
-
-
-
+    };
 }

@@ -93,8 +93,5 @@ public class MainWindowController {
         timeline.play();
     }
 
-
-// Methode LoadCoffeePrices
-
 }
 

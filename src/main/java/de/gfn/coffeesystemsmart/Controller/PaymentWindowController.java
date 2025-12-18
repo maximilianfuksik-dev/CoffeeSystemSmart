@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -22,6 +23,9 @@ public class PaymentWindowController {
     private CheckBox isEmployee;
 
     @FXML
+    private Button creditBtn;
+
+    @FXML
     private Label orderPrice;
 
     private Coffee coffee;
@@ -29,6 +33,8 @@ public class PaymentWindowController {
     private final NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.GERMANY);
 
     private static final int EMPLOYEE_DISC = 10; // In prozent (Anpassbar)
+
+
 
     public void setCoffee(Coffee coffee) {
         this.coffee = coffee;
@@ -49,7 +55,15 @@ public class PaymentWindowController {
     private int priceWithDisc(double priceEuro, int discountPercent) {
         int baseCents = (int) Math.round(priceEuro * 100.0);
         double factor = 1.0 - (discountPercent / 100.0);
-        return (int) Math.round(baseCents * factor);
+        return(int) Math.round(baseCents * (1.0 - EMPLOYEE_DISC / 100.0));
+    }
+
+    @FXML
+    public void initialize() {
+        isEmployee.selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
+            creditBtn.setDisable(!isNowSelected);
+        });
+        creditBtn.setDisable(!isEmployee.isSelected());
     }
 
     @FXML
