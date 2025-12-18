@@ -4,6 +4,7 @@ import de.gfn.coffeesystemsmart.Classes.Coffee;
 import de.gfn.coffeesystemsmart.Classes.CoffeeEntity;
 import de.gfn.coffeesystemsmart.MainApplication;
 import de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository;
+import de.gfn.coffeesystemsmart.Repository.StatRepository;
 import de.gfn.coffeesystemsmart.config.LanguageChange;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -136,13 +137,17 @@ public class CashPaymentWindowController {
     }
 
     @FXML
-    private void btnAcceptPay(ActionEvent event) throws IOException {
+    private void btnAcceptPay(ActionEvent event) throws IOException, SQLException {
         if (coffee == null) return;
-
-        int priceCents = (int) Math.round(coffee.getPrice() * 100.0);
-        boolean enough = cents >= priceCents;
         machineBreaks();
-        if(enough && isBroken) {
+        if(!isBroken) {
+            try {
+                long orderId = StatRepository.insertOrderCash(coffee.getName(), false, getPriceCents(), 1000);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                return;
+            }
+            System.out.println(LanguageChange.getBundle().getString("output.dbSavedOrder"));
             FXMLLoader finishLoader = new FXMLLoader(MainApplication.class.getResource("coffee-in-progress-window.fxml"));
             finishLoader.setResources(LanguageChange.getBundle());
 
@@ -150,6 +155,8 @@ public class CashPaymentWindowController {
 
             CoffeeInProgressWindowController controller = finishLoader.getController();
             controller.setCoffee(coffee);
+
+
 
             Stage cashPayStage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Altes Fenster wird wiederverwertet
             cashPayStage.setTitle(LanguageChange.getBundle().getString("label.inProgress"));
@@ -176,7 +183,7 @@ public class CashPaymentWindowController {
             Scene error = new Scene(errorLoader.load());
 
             ErrorWindowController controller = errorLoader.getController();
-            controller.errorMsgCreate("error.msg.machineBreak");
+            controller.errorMsgCreate(LanguageChange.getBundle().getString("error.msg.machineBreak"));
 
             Stage errorStage = new Stage();
             errorStage.setTitle(LanguageChange.getBundle().getString("label.error"));

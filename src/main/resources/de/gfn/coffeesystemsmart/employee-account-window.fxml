@@ -9,9 +9,9 @@
    <children>
       <Label layoutX="217.0" layoutY="27.0" prefHeight="35.0" prefWidth="166.0" text="%label.employeeAcc" />
       <TextField fx:id="personnelNumber" layoutX="122.0" layoutY="84.0" promptText="%txt.personnelNumber" />
-      <Button layoutX="341.0" layoutY="86.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="%btn.personnelchip" />
+      <Button layoutX="341.0" layoutY="86.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" onAction="#btnCheckPersonnel" text="%btn.personnelchip" />
       <Label fx:id="creditAmount" layoutX="52.0" layoutY="329.0" prefHeight="50.0" prefWidth="194.0" text="Guthaben-Anzeige" />
-      <Button layoutX="122.0" layoutY="160.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="%btn.accept" />
+      <Button fx:id="acceptBtn" layoutX="122.0" layoutY="160.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" onAction="#btnAccept" text="%btn.accept" />
       <Button layoutX="260.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnCancel" text="%btn.cancel" />
    </children>
 </AnchorPane>

@@ -93,6 +93,7 @@ public class PaymentWindowController {
         EmployeeAccountWindowController controller = creditPayLoader.getController();
         controller.setCoffee(coffee);
         controller.setEmployee(isEmployee.isSelected());
+        controller.setDiscountPercent(isEmployee.isSelected() ? EMPLOYEE_DISC : 0);
 
         Stage creditPayStage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Altes Fenster wird wiederverwertet
         creditPayStage.setTitle(LanguageChange.getBundle().getString("label.cardCredit"));
