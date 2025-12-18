@@ -10,6 +10,6 @@
       <Label fx:id="coffeeInProg" alignment="CENTER" layoutX="153.0" layoutY="31.0" prefHeight="66.0" prefWidth="276.0" text="%label.inProgress" />
       <Button layoutX="233.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnCancel" text="%btn.cancel" />
       <ProgressBar fx:id="progressBar" layoutX="162.0" layoutY="134.0" prefWidth="276.0" progress="0.0" />
-      <Label fx:id="coffeeFacts" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="280.0" prefHeight="89.0" prefWidth="546.0" text="Tips and facts about coffee " textAlignment="CENTER" underline="true" />
+      <Label fx:id="coffeeFacts" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="280.0" prefHeight="89.0" prefWidth="546.0" text="Tips and facts about coffee " textAlignment="CENTER" underline="true" wrapText="true" />
    </children>
 </AnchorPane>

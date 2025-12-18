@@ -29,7 +29,7 @@ public class MainApplication extends Application {
         splashStage.show();
 
         // Timer wird gestartet
-        PauseTransition pause = new PauseTransition(Duration.seconds(0)); // Wieder auf 5 sek ändern nach fertig
+        PauseTransition pause = new PauseTransition(Duration.seconds(5)); // Wieder auf 5 sek ändern nach fertig
 
         pause.setOnFinished(event -> {
             splashStage.close(); //<-- Timer wird geschlossen

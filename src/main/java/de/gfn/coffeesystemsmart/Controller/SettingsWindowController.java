@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Locale;
 
+import static de.gfn.coffeesystemsmart.Repository.SmartCoffeeRepository.isBroken;
 import static javafx.application.Platform.exit;
 
 public class SettingsWindowController {
@@ -28,6 +29,21 @@ public class SettingsWindowController {
     }
 
     // Implementierung der Methoden für Reperatur und Auffüllen, von Kaffee und Milch.
+
+    @FXML
+    public void cleanRepair(ActionEvent event) throws IOException {
+        isBroken = false;
+        FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("error-view.fxml"));
+        loader.setResources(LanguageChange.getBundle());
+
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = new Stage();
+        stage.setTitle(LanguageChange.getBundle().getString("label.repair"));
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
     @FXML
     public void btnPrintReport(ActionEvent event) throws IOException {

@@ -2,11 +2,19 @@ package de.gfn.coffeesystemsmart.Repository;
 
 import de.gfn.coffeesystemsmart.Classes.Coffee;
 import de.gfn.coffeesystemsmart.Classes.CoffeeEntity;
+import de.gfn.coffeesystemsmart.Controller.ErrorWindowController;
+import de.gfn.coffeesystemsmart.MainApplication;
+import de.gfn.coffeesystemsmart.config.LanguageChange;
 import de.gfn.coffeesystemsmart.db.DatabaseUtils;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class SmartCoffeeRepository {
 // Hier müssen Datensätze gelesen und gespeichert werden
@@ -17,6 +25,30 @@ public class SmartCoffeeRepository {
 // Repository = Daten
 // Service = Logik
 // Controller = Anzeige
+public static boolean isBroken;
+
+    public static boolean machineBreaks() throws IOException {
+
+        Random rand = new Random();
+        int probability = rand.nextInt(101);
+        if (probability < 2) {
+            FXMLLoader errorLoader = new FXMLLoader(MainApplication.class.getResource("error-view.fxml"));
+            errorLoader.setResources(LanguageChange.getBundle());
+            Scene error = new Scene(errorLoader.load());
+
+            ErrorWindowController controller = errorLoader.getController();
+            controller.errorMsgCreate(LanguageChange.getBundle().getString("error.msg.machineBreak"));
+
+            Stage errorStage = new Stage();
+            errorStage.setTitle(LanguageChange.getBundle().getString("label.error"));
+            errorStage.setScene(error);
+            errorStage.show();
+            return isBroken = true;
+        }
+        else {
+            return isBroken = false;
+        }
+    }
 
 
     public static CoffeeEntity findCoffeeById(int id) throws SQLException {

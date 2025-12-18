@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="493.0" stylesheets="@style/stylesheet.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="42.0" prefHeight="18.0" prefWidth="461.0" text="Smart-Coffee-System">
+      <ImageView fitHeight="435.0" fitWidth="641.0" layoutX="-74.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/GruksikEntertainment.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="358.0" prefHeight="18.0" prefWidth="461.0" text="Smart-Coffee-System">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="233.0" layoutY="340.0" text="v. 1.1.0" />
-      <ImageView fitHeight="150.0" fitWidth="476.0" layoutX="9.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="436.0" layoutY="367.0" text="v. 1.1.0" />
    </children>
 </AnchorPane>
